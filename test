@@ -1,0 +1,866 @@
+DEVICE: DUY NGUYEN 4.4.2
+SCREEN_SIZE: 640x480 (softkey)
+
+Var #x 0
+Var #y 0
+Var #x1 0
+Var #y1 0
+Var #x2 0
+Var #y2 0
+Var #Color 0
+Var #Color1 0
+Var #Count 0
+Var #Startx 0
+Var #Starty 0
+Var #Endx 0
+Var #Endy 0
+Var #MoveSteps 0
+Var #MoveSteps1 0
+Var #Tempx 0
+Var #Tempy 0
+Var #Tempx1 0
+Var #Tempy1 0
+Var #MoveStepsTemp 0
+Var #MoveStepsTemp1 0
+Var #s 0
+Var #Field 1
+Var #Bee 2
+Var #ZoomSteps 0
+Var #LoadSteps 0
+Var #s1 5000
+Var #Tm 35
+Var #M 1
+Var #Times 0
+Var #L 15
+Var #L1 25
+Var #SH 70
+Var #Countsell 0 // عدد مرات البيع
+Var #Countbuy 0 //عدد مرات الشراء
+Var #Times2 0
+Var #Color2 0
+Var #Color3 0
+Var #ZoomSteps2 1
+Var #Count2 1
+:start
+#LoadSteps = 0
+
+:LoadSteps
+Set #Times 0
+if #LoadSteps < 1
+	#LoadSteps = #LoadSteps + 1
+	goto :Steps
+endif
+goto :end
+
+:Steps
+if #LoadSteps == 1
+	goto :Openfarm1
+elseif #LoadSteps == 2
+	goto :Openfarm2
+elseif #LoadSteps == 3
+	goto :Openfarm3
+elseif #LoadSteps == 4
+	goto :Openfarm4
+elseif #LoadSteps == 5
+	goto :Openfarm5
+elseif #LoadSteps == 6
+	goto :Openfarm6
+elseif #LoadSteps == 7
+	goto :Openfarm7
+elseif #LoadSteps == 8
+	goto :Openfarm8
+elseif #LoadSteps == 9
+	goto :Openfarm9
+elseif #LoadSteps == 10
+	goto :Openfarm10
+endif
+
+:Openfarm1
+toast Farm 1 !!!
+sleep 500
+RunApp com.supercell.hayday
+WaitApp com.supercell.hayday
+sleep 2000
+touchDown 0 75 95
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 2000
+touchUp 0
+ouchDown 0 490 270
+sleep 1
+sleep #s1
+
+
+goto :Loadingtime
+
+:Openfarm2
+toast Farm 2 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 130
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 2000
+touchUp 0
+ouchDown 0 490 270
+sleep 1
+sleep #s1
+goto :Loadingtime
+
+:Openfarm3
+toast Farm 3 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 170
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 2000
+touchUp 0
+ouchDown 0 490 270
+sleep 1
+sleep #s1
+goto :Loadingtime
+
+:Openfarm4
+toast Farm 4 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 205
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm5
+toast Farm 5 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 245
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm6
+toast Farm 6 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 280
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm7
+toast Farm 7 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 320
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm8
+toast Farm 8 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 355
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm9
+toast Farm 9 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 395
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Openfarm10
+toast Farm 10 !!!
+sleep 500
+RunApp apps.labx.hdmultipleaccounts
+WaitApp apps.labx.hdmultipleaccounts
+sleep 1000
+touchDown 0 75 430
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep 500
+touchDown 0 490 270
+sleep 1
+touchUp 0
+sleep #s1
+goto :Loadingtime
+
+:Loadingtime
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 25
+	toast no found farm
+	goto :Openfarm2
+endif
+getColor #Color 264 18
+if #Color == -2754049
+	toast abo ibrahim
+	sleep 1000
+  
+	goto :Set
+elseif #Times == 10
+	getColor #Color1 50 450
+elseif #Color1 == -27164
+	toast abo ibrahim
+	sleep 3000
+	goto :Set
+elseif #Color1 == 1290260
+	touchDown 0 30 445
+	sleep 1
+	touchUp 0
+	touchDown 1 75 460
+	sleep 1
+	touchUp 1
+endif
+sleep 5000
+goto :Loadingtime
+
+:Set
+
+set #Times 0
+set #Color 0
+set #Color1 0
+set #s 0
+set #Tray 0
+set #ZoomSteps 1
+set #Count 1
+set #Countsell 0 // عدد مرات البيع
+set #Countbuy 0
+:Loadingdone
+
+
+:Zoom
+touchDown 0 92 59
+sleep 100
+touchMove 0 456 427
+sleep 500
+touchUp 0
+sleep 100
+touchDown 0 92 59
+sleep 100
+touchMove 0 456 427
+sleep 500
+touchUp 0
+goto :Doblezoom 
+
+:Doblezoom
+if #Count > 0
+     #Count = #Count - 1
+     goto :Zoom
+endif
+goto :ZoomSteps
+
+:ZoomSteps
+if #ZoomSteps == 1
+     #ZoomSteps = #ZoomSteps + 1
+     goto :Harvest
+elseif #ZoomSteps == 2
+     #ZoomSteps = #ZoomSteps + 1
+     goto :Grow
+elseif #ZoomSteps == 3
+     #ZoomSteps = #ZoomSteps + 1
+     goto :Sell
+endif
+goto :end
+
+:Harvest
+sleep 100
+:Move
+
+sleep 100
+:MoveGrow
+sleep 100
+
+:MoveGrowEnd
+
+
+:MoveGrow1
+
+
+:MoveGrow1End
+
+
+
+
+:Sell
+touchDown 0 286 450
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 291 457
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 293 468 
+sleep 1
+touchUp 0
+sleep 100
+sleep 1000
+
+:Collect
+touchDown 0 174 214
+sleep 1
+touchUp 0
+touchDown 0 242 214
+sleep 1
+touchUp 0
+touchDown 0 309 214
+sleep 1
+touchUp 0
+touchDown 0 376 214
+sleep 1
+touchUp 0
+touchDown 0 445 214
+sleep 1
+touchUp 0
+touchDown 0 175 288
+sleep 1
+touchUp 0
+touchDown 0 242 288
+sleep 1
+touchUp 0
+touchDown 0 310 288
+sleep 1
+touchUp 0
+touchDown 0 375 288
+sleep 1
+touchUp 0
+touchDown 0 443 288
+sleep 1
+touchUp 0
+sleep 100
+sleep 200
+
+
+
+:Put
+
+if #Countsell < 3
+	#Countsell = #Countsell + 1
+	goto :buyfarm
+
+toast #Countsell
+
+
+//S1
+touchDown 0 443 225
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 443 225
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S2
+touchDown 0 378 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 378 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S3
+touchDown 0 310 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 310 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S4
+touchDown 0 243 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 243 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S5
+touchDown 0 177 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 177 223
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S6
+touchDown 0 439 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 439 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S7
+touchDown 0 371 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 371 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S8
+touchDown 0 304 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 304 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S9
+touchDown 0 237 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 237 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+//S10
+touchDown 0 171 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 171 306
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 140 228
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 176
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 260
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 413 350
+sleep 10
+touchUp 0
+sleep #SH
+
+goto :Put
+endif
+
+:buyfarm //الذهاب الى المزرعة للشراء 
+toast الذهاب الى المزرعة للشراء 
+//Close Shop
+touchDown 0 52 189
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 55 192
+sleep 1
+touchUp 0
+sleep 500
+// الشريط
+tosat open freind
+touchDown 0 620 460
+sleep 3
+touchMove 0 620 462
+touchUp 0
+sleep 3000
+touchDown 0 504 446
+sleep 119
+touchMove 0 504 448
+touchUp 0
+sleep 5000
+//العمل بمزرعة التي نريد الشراء منها
+Times2 0
+:Loadingtime2
+#Times2 = #Times2 + 1
+#Color2 = 0
+#Color3 = 0
+if #Times2 > 25
+	toast no found farm
+	goto :Openfarm2
+endif
+getColor #Color2 15 55
+if #Color2 == 4513528
+	toast ـم فتح المزرعة 
+	sleep 1000
+  
+	goto :Set2
+elseif #Times2 == 10
+	getColor #Color3 15 55
+elseif #Color3 == 4513528
+	toast abo ibrahim
+	sleep 3000
+	goto :Set2
+elseif #Color3 == 4523528
+	touchDown 0 30 445
+	sleep 1
+	touchUp 0
+	touchDown 1 75 460
+	sleep 1
+	touchUp 1
+endif
+sleep 5000
+goto :Loadingtime2
+
+:Set2
+
+set #Times2 0
+set #Color2 0
+set #Color3 0
+set #s 0
+set #Tray 0
+set #ZoomSteps2 1
+set #Count2 1
+
+:Loadingdone2
+
+
+:Zoom2
+touchDown 0 92 59
+sleep 100
+touchMove 0 456 427
+sleep 500
+touchUp 0
+sleep 100
+touchDown 0 92 59
+sleep 100
+touchMove 0 456 427
+sleep 500
+touchUp 0
+
+
+
+:backfreindtool
+touchDown 0 620 380
+sleep 1
+touchMove 0 620 382
+touchUp 0
+sleep 500
+
+
+
+:Sell2
+toast open shope
+touchDown 0 286 450
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 291 457
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 293 468 
+sleep 1
+touchUp 0
+sleep 100
+sleep 1000
+
+:Put3
+toast الجمع
+if #Countbuy < 3
+	#Countbuy = #Countbuy + 1
+	goto :farmhome
+
+toast #Countbuy
+
+touchDown 0 174 214
+sleep 1
+touchUp 0
+touchDown 0 242 214
+sleep 1
+touchUp 0
+touchDown 0 309 214
+sleep 1
+touchUp 0
+touchDown 0 376 214
+sleep 1
+touchUp 0
+touchDown 0 445 214
+sleep 1
+touchUp 0
+touchDown 0 175 288
+sleep 1
+touchUp 0
+touchDown 0 242 288
+sleep 1
+touchUp 0
+touchDown 0 310 288
+sleep 1
+touchUp 0
+touchDown 0 375 288
+sleep 1
+touchUp 0
+touchDown 0 443 288
+sleep 1
+touchUp 0
+sleep 100
+sleep 200
+goto :Put3
+endif
+
+:farmhome
+touchDown 0 31 447
+sleep 1
+touchMove 0 31 449
+touchUp 0
+
+
+:end
