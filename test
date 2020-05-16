@@ -325,6 +325,7 @@ set #ZoomSteps 1
 set #Count 1
 set #Countsell 0 // عدد مرات البيع
 set #Countbuy 0
+
 :Loadingdone
 
 
@@ -813,13 +814,15 @@ touchUp 0
 sleep 100
 sleep 1000
 
-:Put3
-toast الجمع
+
+:collc2
+
 if #Countbuy < 3
 	#Countbuy = #Countbuy + 1
-	goto :farmhome
+	goto :buyfarm
 
 toast #Countbuy
+
 
 touchDown 0 174 214
 sleep 1
@@ -853,8 +856,9 @@ sleep 1
 touchUp 0
 sleep 100
 sleep 200
-goto :Put3
+goto :collc2
 endif
+
 
 :farmhome
 touchDown 0 31 447
