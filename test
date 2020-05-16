@@ -40,7 +40,7 @@ Var #Times2 0
 Var #Color2 0
 Var #Color3 0
 Var #ZoomSteps2 1
-Var #Count2 1
+
 :start
 #LoadSteps = 0
 
@@ -323,6 +323,7 @@ set #s 0
 set #Tray 0
 set #ZoomSteps 1
 set #Count 1
+Var #Count2 1
 set #Countsell 0 // عدد مرات البيع
 set #Countbuy 0
 
@@ -814,16 +815,12 @@ touchUp 0
 sleep 100
 sleep 1000
 
+:Put2
 
-:collc2
-
-if #Countbuy < 3
+if #Countbuy  < 3
 	#Countbuy = #Countbuy + 1
-	goto :buyfarm
-
+	goto :farmhome
 toast #Countbuy
-
-
 touchDown 0 174 214
 sleep 1
 touchUp 0
@@ -855,12 +852,24 @@ touchDown 0 443 288
 sleep 1
 touchUp 0
 sleep 100
-sleep 200
-goto :collc2
+sleep 3000
+
+goto :Put2
 endif
+:farmhome //الذهاب الى المزرعة الرئيسي
+toast go to buyfarm
+toast #Countsell
 
-
-:farmhome
+:Close2Shop //
+touchDown 0 52 189
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 55 192
+sleep 1
+touchUp 0
+sleep 500
+:clickhome //
 touchDown 0 31 447
 sleep 1
 touchMove 0 31 449
